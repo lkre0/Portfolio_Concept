@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <title>Lennart | Front-end Developer</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+<link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+        <header id="home">
+    <nav>
+        <img src="img/plux-red.png" alt="logo" class="logo-img">
+        <ul class="nav-ul">
+            <li><a href="#home" class="home-btn li">Home</a></li>
+            <li><a href="#portfolio" class="portfolio-btn li">Portfolio</a></li>
+            <li><a href="#about" class="about-btn li">About Me</a></li>
+            <li><a href="#contact" class="contact-btn li">Contact</a></li>
+        </ul>
+        <div class="nav-btn">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+        <h1 class="banner-text">Front-end Developer</h1>
+        <h3 class="banner-text-sm">Hello, my name is Lennart and I am based in Germany.<br>
+            <span>I am specialized in Front-end Development and UI/UX Design.</span></h3>
+        <a href="#contact" class="btn" id="contact-btn-2">Contact Me <img src="img/arrow.png" alt="arrow" class="arrow"></a>
+    </header>
+
+    <section class="portfolio" id="portfolio">
+        <h2>Portfolio</h2>
+        <!-- SLIDER -->
+        <section class="center slider">
+            <div>
+                <a href="https://lkre0.github.io/Acme_Photography/"><img src="img/web1.png" alt=""></a>
+                <h4>Acme Photography</h4>
+                <p>Website Design &amp; Development</p>
+            </div>
+                <div>
+                        <a><img src="img/web2.png" alt=""></a>
+                        <h4>Design Monthly</h4>
+                        <p>Website Design &amp; Development</p>
+                    </div>
+                    <div>
+                            <a><img src="img/web3.png" alt=""></a>
+                            <h4>Finance X</h4>
+                            <p>Website Design &amp; Development</p>
+                        </div>
+                        <div>
+                                <a><img src="img/web4.png" alt=""></a>
+                                <h4>myTunes</h4>
+                                <p>Website Design &amp; Development</p>
+                            </div>
+                            <div>
+                                    <a><img src="img/web5.png" alt=""></a>
+                                    <h4>Plux</h4>
+                                    <p>Website Design &amp; Development</p>
+                                </div>
+        </section>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p class="about-text">I am an experienced Front-end Developer and UI/UX Designer from Germany. I can design and code responsive Websites with a modern and clean design.
+<br><br>
+            <span>Designing and coding were my passions since my early teenage, where I already began with creating the websites of local businesses.</span>
+            </p>
+
+            <div class="grid-knowledge">
+                <div class="coding-languages">
+                    <h4>Coding</h4>
+                <div class="grid1">
+                    <p>JavaScript</p>
+                    <p>CSS 3</p>
+                    <p>HTML 5</p>
+                </div>
+                    <div class="grid1-1">
+                    <p>jQuery</p>
+                    <p>Bootstrap</p>
+                    <p>React</p>
+                </div>
+                <div class="grid1-3">
+                        <p>SASS</p>
+                        <p>Angular</p>
+                    </div>
+                
+                </div>
+                <div class="software">
+                        <h4>Software</h4>
+                <div class="grid2">
+                    <p>Adobe XD</p>
+                    <p>Photoshop</p>
+                </div>
+                <div class="grid2-1">
+                        <p>VS Code</p>
+                        <p>GitHub</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact
+        </h2>
+        <h5>If you are interested in working with me, you can contact me right here:</h4>
+        <div class="grid-contact">
+            <div class="name-input">
+                <p>Name / Company</p>
+                <input type="text">
+            </div>
+            <div class="subject-input">
+                <p>Subject</p>
+                <input type="text">
+            </div>
+        </div>
+        <div class="message-field">
+            <p>Message</p>
+            <textarea name="message" id="" cols="30" rows="10"></textarea>
+        </div>
+        <a href="#">Send</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2017 Lennart K.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    $(document).on('ready', function() {
+
+    $(".center").slick({
+
+    dots: false,
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 1.5,
+    slidesToScroll: 1,
+    arrows: false,
+
+    responsive: [{
+
+    breakpoint: 1024,
+    settings: {
+         slidesToShow: 1.5,
+         infinite: true
+    }
+
+}, {
+
+    breakpoint: 600,
+    settings: {
+         slidesToShow: 1,
+         dots: true
+    }
+
+}, {
+
+    breakpoint: 300,
+    settings: "unslick" //destroy slick
+
+}]
+
+});
+
+$('.nav-btn').on('click', function(){
+    $(".line1").toggleClass("rotate1");
+    $(".line3").toggleClass("not-display");
+    $(".line2").toggleClass("rotate2");
+
+    $('.nav-btn').toggleClass('fixed');
+    $('.line1').toggleClass('fixed');
+    $('.line2').toggleClass('fixe1');
+
+    $('.nav-ul').toggleClass('top');
+
+
+{
+
+
+}
+});
+
+if( $(window).width() < 550)
+{
+$('.li').on('click', function(){
+    $(".line1").toggleClass("rotate1");
+    $(".line3").toggleClass("not-display");
+    $(".line2").toggleClass("rotate2");
+
+    $('.nav-btn').toggleClass('fixed');
+    $('.line1').toggleClass('fixed');
+    $('.line2').toggleClass('fixe1');
+
+    $('.nav-ul').toggleClass('top');
+});
+}
+
+// Animate Smooth Scrolling
+$(".home-btn").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+
+$('.portfolio-btn').on('click', function(){
+    const portfolio = $('#portfolio').position().top;
+
+    $('html, body').animate({
+        scrollTop: portfolio
+    }, 900);
+    return false;
+})
+
+$('.about-btn').on('click', function(){
+    const about = $('#about').position().top;
+
+    $('html, body').animate({
+        scrollTop: about
+    }, 1000);
+    return false;
+})
+
+$('.contact-btn').on('click', function(){
+    const contact = $('#contact').position().top;
+
+    $('html, body').animate({
+        scrollTop: contact
+    }, 1000);
+    return false;
+})
+
+$('#contact-btn-2').on('click', function(){
+    const contact = $('#contact').position().top;
+
+    $('html, body').animate({
+        scrollTop: contact
+    }, 1000);
+    return false;
+})
+
+});
+
+
+
+    </script>
+</body>
+</html>
